@@ -1,0 +1,101 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Asegura que el contenido esté apilado de arriba a abajo */
+    justify-content: flex-start; /* Asegura que el contenido esté alineado al principio */
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+}
+
+/* Estilo para la zona superior (logo y mensaje de bienvenida) */
+header {
+    display: flex;
+    flex-direction: column; /* Apilar logo y mensaje de bienvenida verticalmente */
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    padding: 50px 20px; /* Agrega más espacio alrededor */
+    width: 100%;
+}
+
+/* Logo */
+.logo {
+    max-width: 150px; /* Ajusta el tamaño de la imagen */
+    margin-bottom: 20px; /* Espacio debajo del logo */
+}
+
+/* Mensaje de bienvenida */
+h2 {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Zona de login */
+#login {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: 20px; /* Asegura que el login esté por debajo del header */
+}
+
+/* Estilos para los inputs y botón dentro del formulario */
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Tabla y otros botones */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+table input {
+    width: 100px;
+    padding: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e55347;
+}

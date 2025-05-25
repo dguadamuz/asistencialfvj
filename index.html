@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> <!-- Asegura que se use la codificación UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <img src="https://qqcxntabmbnekeankpld.supabase.co/storage/v1/object/sign/images/escudo.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvZXNjdWRvLnBuZyIsImlhdCI6MTc0MTU4MDE1MiwiZXhwIjoxODk5MjYwMTUyfQ.uM0D9--YK45NlB8R_3iCsxJujsWGjZrU6bk2tsHySRY" alt="Logo de la Aplicación" class="logo">
+        <h1>Bienvenido al Sistema de Ausencismo LFVJ 2025</h1>
+    </header>
+
+
+    <!-- Formulario de Login -->
+    <div id="login">
+        <h2>Iniciar sesión</h2>
+        <input type="email" id="email" placeholder="Correo electrónico">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button id="login-button">Iniciar sesión</button>
+    </div>
+
+    <!-- Contenido principal (oculto hasta iniciar sesión) -->
+    <div id="main-content" style="display: none;">
+        <h2>Bienvenido, Docente</h2>
+
+        <!-- Selección de grupo -->
+        <div>
+            <label for="group-select">Selecciona un grupo:</label>
+            <select id="group-select">
+                <!-- Los grupos se cargarán aquí -->
+            </select>
+        </div>
+
+        <!-- Selección de asignatura -->
+        <div>
+            <label for="subject-select">Selecciona una asignatura:</label>
+            <select id="subject-select">
+                <option value="Matematica">Matematica</option>
+                <option value="Estudios Sociales">Estudios Sociales</option>
+                <option value="Español">Español</option>
+                <option value="Ciencias">Ciencias</option>
+                <option value="Educacion Civica">Educación Cívica</option>
+                <option value="Frances">Francés</option>
+                <option value="Ingles">Inglés</option>
+                <option value="Fisica">Física</option>
+                <option value="Quimica">Química</option>
+                <option value="Biologia">Biología</option>
+                <option value="Educacion Fisica">Educación Física</option>
+                <option value="Tecnologia">Tecnología</option>
+                <option value="Filosofia">Filosofía</option>
+                <option value="Psicologia">Psicología</option>
+                <option value="Formacion Tecnologica">Formación Tecnológica</option>
+                <option value="Educacion para el Hogar">Educación para el Hogar</option>
+                <option value="Artes Industriales">Artes Industriales</option>
+                <option value="Artes Plasticas">Artes Plásticas</option>
+                <option value="Educacion Musical">Educación Musical</option>
+                <option value="Orientacion">Orientación</option>
+                <option value="Guia">Guía</option>
+            </select>
+        
+            <!-- Selección de mes -->
+            <label for="month-select">Mes:</label>    
+            <select id="month-select">
+                <option value="febrero">Febrero</option>
+                <option value="marzo">Marzo</option>
+                <option value="abril">Abril</option>
+                <option value="mayo">Mayo</option>
+                <option value="junio">Junio</option>
+                <option value="julio">Julio</option>
+                <option value="agosto">Agosto</option>
+                <option value="setiembre">Setiembre</option>
+                <option value="octubre">Octubre</option>
+                <option value="noviembre">Noviembre</option>
+                <option value="diciembre">Diciembre</option>
+            </select>
+        </div>
+
+        <!-- Tabla de asistencia -->
+        <table id="students-table">
+            <thead>
+                <tr>
+                    <th>Estudiante</th>
+                    <th>Ausencias</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los estudiantes se cargarán aquí -->
+            </tbody>
+        </table>
+
+        <button id="save-absences-button">Guardar Ausencias</button>
+
+        <!-- Botón para generar PDF -->
+        <button id="generate-pdf">Generar Informe PDF</button>
+    </div>
+
+    <!-- Cargar la librería de Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.0/dist/supabase.min.js"></script>
+    
+    <!-- Cargar jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- Cargar la extensión autoTable -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.22/jspdf.plugin.autotable.min.js"></script>
+
+    <!-- Cargar tu archivo app.js -->
+    <script src="app.js"></script>
+
+    <script>
+        // Espera a que todas las librerías se carguen correctamente
+        window.onload = function () {
+            const { jsPDF } = window.jspdf;  // Extraer jsPDF de window.jspdf
+            console.log(jsPDF); // Verifica si se cargó correctamente
+
+            };
+    </script>
+
+</body>
+</html>
